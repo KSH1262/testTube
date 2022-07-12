@@ -1,0 +1,257 @@
+:root {
+  --white-color: #fff;
+  --black-color: #1e1e1e;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  --padding: 12px;
+  --spacing-small: 6px;
+  --avatar-size: 36px;
+
+  --font-large: 20px;
+  --font-regular: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black-color);
+  padding: var(--padding);
+  color: var(--white-color);
+}
+
+.header .header_icon .fa-solid fa-magnifying-glass {
+  margin-right: var(--padding);
+}
+
+.logo {
+  font-size: var(--font-large);
+}
+
+.logo i {
+  color: var(--red-color);
+  font-size: 20px;
+}
+
+.logo span {
+  color: white;
+  font-size: 20px;
+  align-items: center;
+}
+
+.header_icon i {
+  color: white;
+  padding-right: 10px;
+}
+
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1080px;
+}
+
+.info {
+  padding: var(--padding);
+}
+
+.info .tag {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  padding-left: 5px;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+  margin: 5px;
+}
+
+.info .tag li {
+  margin-right: var(--padding);
+}
+
+.info .data {
+  display: flex;
+}
+
+.info .data .title {
+  padding-left: 7px;
+  margin-right: var(--padding);
+}
+
+.info .data .title.clamp{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .data .titleBtn {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .data .titleBtn.clicked{
+  transform: rotate(180deg);
+}
+
+.info .data a i {
+  color: var(--grey-dark-color);
+}
+
+.info .view {
+  padding-left: 7px;
+  font-size: 10px;
+  color: var(--grey-dark-color);
+}
+
+.info .up-donw {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.info .up-donw li {
+  padding-right: 40px;
+  color: var(--grey-dark-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info .up-donw li span {
+  margin-top: calc(var(--padding) / 4);
+  font-size: var(--font-small);
+  
+}
+
+.info .up-donw li a i {
+  color: var(--grey-dark-color);
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+  margin: 0px var(--padding);
+}
+
+.channel .channelData{
+  display: flex;
+  align-items: center;
+}
+
+.channel .channelData .info{
+  display: flex;
+  flex-direction: column;
+}
+.channel img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.channel .channelData .name{
+  font-size: var(--font-medium);
+}
+
+.channel .channelData .view{
+  font-size: var(--font-small);
+}
+
+.channel button{
+  color: var(--red-color);
+}
+
+.next{
+  padding: 0 var(--padding);
+}
+
+.next > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.next .item{
+  display: flex;
+}
+
+.next .item img{
+  flex-basis: 35%;
+  margin-right: var(--padding);
+}
+
+.next .item .img img{
+  width: 100%;
+}
+
+.next .item .itemInfo{
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 calc(var(--padding)/2);
+}
+
+.next .item .moreBtn{
+  flex-basis: 5%;
+  height: 100%;
+}
+
+.next .item .itemInfo .title {
+  font-size: var(--font-small);
+}
+
+.next .item .itemInfo .name,
+.next .item .itemInfo .view {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.infoAndNext{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndNext{
+    flex-direction: row;
+  }
+  .infoAndNext .information{
+    flex-basis: 50%;
+  }
+  .infoAndNext .next{
+    flex-basis: 50%;
+    margin: var(--padding);
+  }
+}
